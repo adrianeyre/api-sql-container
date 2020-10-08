@@ -8,6 +8,7 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 * [Prerequisites](#prerequisites)
 * [Setup](#setup)
 * [RESTful Commands](#commands)
+* [Database Management](#dbm)
 
 ## <a name="prerequisites">Prerequisites</a>
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -35,4 +36,14 @@ curl https://localhost:32798/api/products -UseBasicParsing
 POST
 ```
 curl -i -H "Content-Type: application/json" -X POST --data '{\"name\":\"test\",\"price\":1.99}' https://localhost:32798/api/products
+```
+
+## <a name="dbm">Database Management</a>
+- Open `SQL Server Management Studio (SSMS)`
+- Login Credetials
+```
+  Server Name: 127.0.0.1,1433
+  Authentication: SQL Server Authentication
+  Login: sa
+  Password: SecureP4ssW0rd
 ```
