@@ -1,4 +1,4 @@
-# .NET Core 3.1 API - SQL - Docker Container
+# .NET Core 3.1 API - SQL Server - Docker Container
 ![net](https://img.shields.io/badge/core-v3.1-blue.svg?&logo=.net) [![Generic badge](https://img.shields.io/badge/SSMS-v18.6-blue.svg)](https://shields.io/) ![](https://img.shields.io/docker/build/mariobehling/loklak.svg)
 
 ## Background
