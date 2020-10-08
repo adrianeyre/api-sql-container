@@ -29,7 +29,7 @@ $ git clone https://github.com/adrianeyre/api-sql-container
 $ cd api-sql-container
 ```
 - Open the file `\ApiSQLContainer\ApiSQLContainer.sln`
-- Run the application `Docker Compose`
+- Run the application in Visual Studio (Docker Compose)
 - Navigate to `https://localhost:32798/api/products`
 
 ## <a name="commands">CRUD Commands</a>
