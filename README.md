@@ -26,7 +26,7 @@ $ cd api-sql-container
 - Run the application `Docker Compose`
 - Navigate to `https://localhost:32798/api/products`
 
-## <a name="commands">RESTful Commands</a>
+## <a name="commands">CRUD Commands</a>
 - Open a command prompt
 
 GET
