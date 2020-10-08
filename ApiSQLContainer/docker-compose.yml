@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  apisqlcontainer:
+    container_name: api
+    links:
+      - sqlserverService
+    environment:
+      SQLSERVER_HOST: "sqlserver"
+      SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
+      SQLSERVER_DATABASE: "ProductsDb"
+    image: ${DOCKER_REGISTRY-}apisqlcontainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+  sqlserverService:
+    image: "microsoft/mssql-server-linux:2017-latest"
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "SecureP4ssW0rd"
+      ACCEPT_EULA: "Y"
+    volumes:  
+      - ./data/mssql:/var/opt/mssql3  
+    ports:  
+      - '1433:1433'  
+    expose:  
+      - 1433
