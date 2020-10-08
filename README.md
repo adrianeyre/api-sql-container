@@ -16,6 +16,7 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
 ## <a name="setup">Setup</a>
+* Download [Docker Desktop](https://www.docker.com/products/docker-desktop), install and log in to the application
 * To clone the repo and run the game
 ```shell
 $ git clone https://github.com/adrianeyre/api-sql-container
