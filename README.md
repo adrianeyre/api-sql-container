@@ -7,7 +7,7 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 ## Index
 * [Prerequisites](#prerequisites)
 * [Setup](#setup)
-* [RESTful Commands](#commands)
+* [CRUD Commands](#commands)
 * [Database Management](#dbm)
 
 ## <a name="prerequisites">Prerequisites</a>
