@@ -17,7 +17,9 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 ### Application NuGet Packages
 - Microsoft.AspNetCore - v2.2.0
 - Microsoft.AspNetCore.Mvc - v2.2.0
+- Microsoft.EntityFrameworkCore.Design - v3.1.8
 - Microsoft.EntityFrameworkCore.SqlServer - v3.1.8
+- Microsoft.EntityFrameworkCore.Tools - v3.1.8
 - Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.10.9
 
 ## <a name="setup">Setup</a>
