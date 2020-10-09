@@ -10,6 +10,10 @@ services:
       SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
       SQLSERVER_DATABASE: "ProductsDb"
     image: ${DOCKER_REGISTRY-}apisqlcontainer
+    ports:
+      - '6001:443'
+    expose:
+      - 6001
     build:
       context: .
       dockerfile: Dockerfile

@@ -7,7 +7,6 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 ## Index
 * [Prerequisites](#prerequisites)
 * [Setup](#setup)
-* [CRUD Commands](#commands)
 * [Database Management](#dbm)
 
 ## <a name="prerequisites">Prerequisites</a>
@@ -31,20 +30,8 @@ $ cd api-sql-container
 - Open the file `\ApiSQLContainer\ApiSQLContainer.sln`
 - Set the start up project to `docker-compose`
 - Run the application in Visual Studio
-- Navigate to `https://localhost:32798/api/products`
-
-## <a name="commands">CRUD Commands</a>
-- Open a command prompt
-
-GET
-```shell
-curl https://localhost:32798/api/products -UseBasicParsing
-```
-
-POST
-```
-curl -i -H "Content-Type: application/json" -X POST --data '{\"name\":\"test\",\"price\":1.99}' https://localhost:32798/api/products
-```
+- Navigate to `https://localhost:6001/api/products`
+- Navigate to `https://localhost:6001/api/books`
 
 ## <a name="dbm">Database Management</a>
 - Open `SQL Server Management Studio (SSMS)`
