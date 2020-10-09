@@ -29,6 +29,7 @@ $ git clone https://github.com/adrianeyre/api-sql-container
 $ cd api-sql-container
 ```
 - Open the file `\ApiSQLContainer\ApiSQLContainer.sln`
+- Set the start up project to `docker-compose`
 - Run the application in Visual Studio
 - Navigate to `https://localhost:32798/api/products`
 
