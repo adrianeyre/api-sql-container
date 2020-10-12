@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  sqlserverservice:
+    image: "microsoft/mssql-server-linux:2017-latest"
+    container_name: sqlserver
+    environment:
+      SA_PASSWORD: "SecureP4ssW0rd"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ./data/mssql:/var/opt/mssql3
+    ports:
+      - '1433:1433'
+    expose:
+      - 1433
