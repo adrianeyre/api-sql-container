@@ -1,0 +1,7 @@
+﻿CREATE TABLE [version].[Patch]
+(
+	[PatchId] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] VARCHAR(100) NOT NULL,
+    [Description] VARCHAR(200) NOT NULL, 
+    [RunDatetime] DATETIME NOT NULL DEFAULT GETDATE(), 
+)

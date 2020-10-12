@@ -10,6 +10,7 @@ namespace ApiSQLContainer.Contexts
 
         public ApiContext(DbContextOptions<ApiContext> options) : base(options)
         {
+            this.Database.Migrate();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
