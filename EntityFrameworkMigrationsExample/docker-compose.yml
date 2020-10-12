@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.8'
 
 services:
   apisqlcontainer:
@@ -10,13 +10,16 @@ services:
       SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
       SQLSERVER_DATABASE: "ProductsDb"
     image: ${DOCKER_REGISTRY-}apisqlcontainer
-    ports:
-      - '6001:443'
-    expose:
+    ports:  
+      - '6001:443'  
+    expose:  
       - 6001
     build:
       context: .
       dockerfile: Dockerfile
+    networks: 
+      - backend
+
   sqlserverService:
     image: "microsoft/mssql-server-linux:2017-latest"
     container_name: sqlserver
@@ -29,3 +32,9 @@ services:
       - '1433:1433'  
     expose:  
       - 1433
+    networks: 
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"
