@@ -3,14 +3,13 @@ version: '3.4'
 services:
   databaselcontainer:
     container_name: davpac-database
-    image: ${DOCKER_REGISTRY-}databasecontainer
     networks:
       - default
     build:
       context: .
       dockerfile: Dockerfile.Database
       args:
-        DB_SERVER: "127.0.0.1,1433"
+        DB_SERVER: "192.168.201.81,1433"
         DB_PASSWORD: "SecureP4ssW0rd"
         DB_NAME: "ProductsDb"
         ACCEPT_EULA: "Y"

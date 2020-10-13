@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DavPacExampleDatabase", "DavPacExampleDatabase.sqlproj", "{950E3332-316F-49A6-B1C4-D15F2D6DEBB4}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DacPacExampleDatabase", "DacPacExampleDatabase.sqlproj", "{950E3332-316F-49A6-B1C4-D15F2D6DEBB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>DavPacExampleDatabase</Name>
+    <Name>DacPacExampleDatabase</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{950e3332-316f-49a6-b1c4-d15f2d6debb4}</ProjectGuid>
@@ -11,8 +11,8 @@
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>DavPacExampleDatabase</RootNamespace>
-    <AssemblyName>DavPacExampleDatabase</AssemblyName>
+    <RootNamespace>DacPacExampleDatabase</RootNamespace>
+    <AssemblyName>DacPacExampleDatabase</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -71,6 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SqlSchemaCompare\SqlSchemaCompare.scmp" />
-    <None Include="DavPacExampleDatabase.publish.xml" />
+    <None Include="DacPacExampleDatabase.publish.xml" />
   </ItemGroup>
 </Project>

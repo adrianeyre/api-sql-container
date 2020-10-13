@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseName>ProductsDb</TargetDatabaseName>
-    <DeployScriptFileName>DavPacExampleDatabase.sql</DeployScriptFileName>
+    <DeployScriptFileName>DacPacExampleDatabase.sql</DeployScriptFileName>
     <TargetConnectionString>Data Source=127.0.0.1,1433;Persist Security Info=True;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
     <ProfileVersionNumber>1</ProfileVersionNumber>
   </PropertyGroup>

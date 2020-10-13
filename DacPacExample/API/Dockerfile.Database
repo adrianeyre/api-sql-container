@@ -13,9 +13,10 @@ RUN wget -progress=bar:force -q -O sqlpackage.zip https://go.microsoft.com/fwlin
 COPY Build/DavPacExampleDatabase.dacpac /tmp/db.dacpac
 
 # Configure external build arguments to allow configurability.
-ARG DB_SERVER
-ARG DB_PASSWORD
-ARG DB_NAME
+ARG DB_SERVER=not_server
+ARG DB_PASSWORD=not_password
+ARG DB_NAME=not_name
+ARG CACHE_DATE=not_a_date
 
 # Configure the required environmental variables
 ENV ACCEPT_EULA=Y
@@ -25,7 +26,8 @@ ENV DBNAME=$DB_NAME
 
 # Launch SQL Server, confirm startup is complete, deploy the DACPAC, then terminate SQL Server.
 # See https://stackoverflow.com/a/51589787/488695
+ARG CACHEBUST
+RUN echo "$CACHEBUST"
 RUN ( /opt/mssql/bin/sqlservr & ) | grep -q "Service Broker manager has started" \
     && /opt/sqlpackage/sqlpackage /a:Publish /tsn:$DBSERVER /tdn:$DBNAME /tu:sa /tp:$SA_PASSWORD /sf:/tmp/db.dacpac \
-    && rm /tmp/db.dacpac \
-    && pkill sqlservr
+    && rm /tmp/db.dacpac
