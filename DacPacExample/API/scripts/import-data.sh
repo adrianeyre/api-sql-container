@@ -1,7 +1,13 @@
 #!/bin/bash
 
-echo "----------------------------- START OF IMPORT-DATA SCRIPT -----------------------------"
+echo "----------------------------- START OF SCRIPTS -----------------------------"
 
-/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P SecureP4ssW0rd -i /scripts/DacPacExampleDatabase.publish.sql
+sleep 30s;
 
-echo "------------------------------ END OF IMPORT-DATA SCRIPT -------------------------------"
+for file in /scripts/custom/*.sql; do
+    f=$(echo "${file##*/}");
+    filename=$(echo $f| cut  -d'.' -f 1);
+    /scripts/run-custom-scripts.sh $filename
+done
+
+echo "------------------------------ END OF SCRIPTS -------------------------------"

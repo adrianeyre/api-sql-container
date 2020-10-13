@@ -62,6 +62,8 @@
     <Folder Include="version" />
     <Folder Include="version\Schema" />
     <Folder Include="version\Tables" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Post" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="version\Schema\version.sql" />
@@ -72,5 +74,9 @@
   <ItemGroup>
     <None Include="SqlSchemaCompare\SqlSchemaCompare.scmp" />
     <None Include="DacPacExampleDatabase.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Master.Script.PostDeployment.sql" />
+    <None Include="Scripts\Post\AddProducts.sql" />
   </ItemGroup>
 </Project>
