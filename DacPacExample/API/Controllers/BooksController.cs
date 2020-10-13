@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using DacPacExample.Contexts;
-using DacPacExample.Models;
+using DacPacApiExample.Contexts;
+using DacPacApiExample.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DacPacExample.Controllers
+namespace DacPacApiExample.Controllers
 {
     [Route("api/[controller]")]
     public class BooksController : Controller

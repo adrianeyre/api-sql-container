@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DacPacExample.Models
+namespace DacPacApiExample.Models
 {
-    public class Book
+    public class Book : IBook
     {
         [Key]
         public int Id { get; set; }

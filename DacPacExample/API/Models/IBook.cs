@@ -1,4 +1,4 @@
-﻿namespace DacPacExample.Models
+﻿namespace DacPacApiExample.Models
 {
     public interface IBook
     {

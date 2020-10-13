@@ -1,7 +1,7 @@
-﻿using DacPacExample.Models;
+﻿using DacPacApiExample.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DacPacExample.Contexts
+namespace DacPacApiExample.Contexts
 {
     public interface IApiContext
     {

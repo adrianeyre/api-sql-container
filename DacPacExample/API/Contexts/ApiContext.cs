@@ -1,7 +1,7 @@
-﻿using DacPacExample.Models;
+﻿using DacPacApiExample.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace DacPacExample.Contexts
+namespace DacPacApiExample.Contexts
 {
     public class ApiContext : DbContext, IApiContext
     {
@@ -10,6 +10,7 @@ namespace DacPacExample.Contexts
 
         public ApiContext(DbContextOptions<ApiContext> options) : base(options)
         {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

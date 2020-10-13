@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DacPacExample.Models
+namespace DacPacApiExample.Models
 {
     public class Product : IProduct
     {

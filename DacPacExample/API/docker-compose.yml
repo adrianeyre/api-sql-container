@@ -1,38 +1,36 @@
-version: '3.4'
+version: '3.8'
 
 services:
-  dacpacexample:
-    container_name: dacpac-api
+  dacpacapiexample:
+    container_name: api
     image: ${DOCKER_REGISTRY-}dacpacapiexample
+    links:
+      - sqlserverservice
     environment:
       SQLSERVER_HOST: "sqlserver"
       SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
       SQLSERVER_DATABASE: "ProductsDb"
     ports:  
-      - '44386:443'  
+      - '44325:443'  
     expose:  
-      - 44386
-    networks:
-      - default
+      - 44325
     build:
       context: .
       dockerfile: Dockerfile
 
-  databaselcontainer:
-    container_name: dacpac-database
-    image: ${DOCKER_REGISTRY-}dacpacdatabaseexample
-    networks:
-      - default
-    build:
-      context: .
-      dockerfile: Dockerfile.Database
-      args:
-        DB_SERVER: "192.168.201.81,1433"
-        DB_PASSWORD: "SecureP4ssW0rd"
-        DB_NAME: "ProductsDb"
-        ACCEPT_EULA: "Y"
-
-networks:
-  default:
-    external:
-      name: databasecontainer_default
+  sqlserverservice:
+    container_name: sqlserver
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "SecureP4ssW0rd"
+      ACCEPT_EULA: "Y"
+    volumes:  
+      - ./data/mssql:/var/opt/mssql3
+      - ./backups:/backups
+      - ./scripts:/scripts
+    entrypoint: 
+      - ./scripts/entrypoint.sh   
+    ports:  
+      - '1433:1433'  
+    expose:  
+      - 1433
