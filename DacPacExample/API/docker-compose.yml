@@ -1,8 +1,26 @@
 version: '3.4'
 
 services:
+  dacpacexample:
+    container_name: dacpac-api
+    image: ${DOCKER_REGISTRY-}dacpacapiexample
+    environment:
+      SQLSERVER_HOST: "sqlserver"
+      SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
+      SQLSERVER_DATABASE: "ProductsDb"
+    ports:  
+      - '44386:443'  
+    expose:  
+      - 44386
+    networks:
+      - default
+    build:
+      context: .
+      dockerfile: Dockerfile
+
   databaselcontainer:
-    container_name: davpac-database
+    container_name: dacpac-database
+    image: ${DOCKER_REGISTRY-}dacpacdatabaseexample
     networks:
       - default
     build:
@@ -13,23 +31,6 @@ services:
         DB_PASSWORD: "SecureP4ssW0rd"
         DB_NAME: "ProductsDb"
         ACCEPT_EULA: "Y"
-
-  davpacexample:
-    container_name: davpac-api
-    image: ${DOCKER_REGISTRY-}davpacexample
-    environment:
-      SQLSERVER_HOST: "sqlserver"
-      SQLSERVER_SA_PASSWORD: "SecureP4ssW0rd"
-      SQLSERVER_DATABASE: "ProductsDb"
-    ports:  
-      - '6002:443'  
-    expose:  
-      - 6002
-    networks:
-      - default
-    build:
-      context: .
-      dockerfile: Dockerfile
 
 networks:
   default:

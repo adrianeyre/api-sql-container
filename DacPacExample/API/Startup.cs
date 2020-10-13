@@ -1,5 +1,5 @@
 using System;
-using DavPacExample.Contexts;
+using DacPacExample.Contexts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace DavPacExample
+namespace DacPacExample
 {
     public class Startup
     {

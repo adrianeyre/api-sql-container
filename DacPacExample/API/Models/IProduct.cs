@@ -1,4 +1,4 @@
-﻿namespace DavPacExample.Models
+﻿namespace DacPacExample.Models
 {
     public interface IProduct
     {

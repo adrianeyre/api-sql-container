@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DavPacExample.Models
+namespace DacPacExample.Models
 {
     public class Book
     {

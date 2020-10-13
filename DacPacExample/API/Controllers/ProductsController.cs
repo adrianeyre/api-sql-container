@@ -1,9 +1,9 @@
 ﻿using System.Linq;
-using DavPacExample.Contexts;
-using DavPacExample.Models;
+using DacPacExample.Contexts;
+using DacPacExample.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DavPacExample.Controllers
+namespace DacPacExample.Controllers
 {
     [Route("api/[controller]")]
     public class ProductsController : Controller
