@@ -11,7 +11,10 @@ The purpose of this repo is to define the pros and cons for containerising an En
 * [Prerequisites](#prerequisites)
 * [Initial Setup](#initial)
 * [Entity Framework](#entity)
-  * [Setup](#setup)
+  * [Setup](#entitysetup)
+* [Dacpac Database](#dacpac)
+  * [Setup](#dacpacsetup)
+* [API Usage](#api)
 * [Database Management](#dbm)
 
 ## <a name="prerequisites">Prerequisites</a>
@@ -28,17 +31,20 @@ $ cd api-sql-container
 ```
 
 ## <a name="entity">Entity Framework</a>
-### <a name="setup">Setup</a>
+### <a name="entitysetup">Setup</a>
 - Open folder `/EntityFrameworkMigrationsExample`
 - Load the application `ApiSQLContainer.sln`
 - Set the start up project to `docker-compose`
 
-
-- Open the file `\ApiSQLContainer\ApiSQLContainer.sln`
+## <a name="dacpac">Dacpac Database</a>
+### <a name="dacpacsetup">Setup</a>
+- Open the file `\DacPacExample\API\DacPacApiExample.sln`
 - Set the start up project to `docker-compose`
 - Run the application in Visual Studio
-- Navigate to `https://localhost:6001/api/products`
-- Navigate to `https://localhost:6001/api/books`
+
+## <a name="api">API Usage</a>
+- Navigate to `https://localhost:44325/api/products`
+- Navigate to `https://localhost:44325/api/books`
 
 ## <a name="dbm">Database Management</a>
 - Open `SQL Server Management Studio (SSMS)`
