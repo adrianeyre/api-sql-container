@@ -4,6 +4,7 @@ namespace ApiSQLContainer.Models
 {
     public class Product : IProduct
     {
+        [Key]
         public int Id { get; set; }
 
         [Required]
