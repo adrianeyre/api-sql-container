@@ -2,11 +2,13 @@
 ![net](https://img.shields.io/badge/core-v3.1-blue.svg?&logo=.net) ![docker](https://img.shields.io/static/v1?label=docker&message=v2.4.0&color=blue&logo=docker&link=https://www.docker.com/products/docker-desktop) ![ssms](https://img.shields.io/badge/SSMS-v18.6-blue.svg?&logo=visual-studio-code) [![Generic badge](https://img.shields.io/badge/EntityFramework-v3.1.8-blue.svg)](https://shields.io/) 
 
 ## Background
-This is a simple .NET Core API that is containerised using Docker and a containerised SQL Server.
+The purpose of this repo is to define the pros and cons for containerising an Entity Framework vs Database dacpac solution. Each version has a simple API and database in docker containers.
 
 ## Index
 * [Prerequisites](#prerequisites)
-* [Setup](#setup)
+* [Initial Setup](#initial)
+* [Entity Framework](#entity)
+  * [Setup](#setup)
 * [Database Management](#dbm)
 
 ## <a name="prerequisites">Prerequisites</a>
@@ -14,21 +16,22 @@ This is a simple .NET Core API that is containerised using Docker and a containe
 - [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 
-### Application NuGet Packages
-- Microsoft.AspNetCore - v2.2.0
-- Microsoft.AspNetCore.Mvc - v2.2.0
-- Microsoft.EntityFrameworkCore.Design - v3.1.8
-- Microsoft.EntityFrameworkCore.SqlServer - v3.1.8
-- Microsoft.EntityFrameworkCore.Tools - v3.1.8
-- Microsoft.VisualStudio.Azure.Containers.Tools.Targets - v1.10.9
-
-## <a name="setup">Setup</a>
+### <a name="initial">Initial Setup</a>
 * Download [Docker Desktop](https://www.docker.com/products/docker-desktop), install and log in to the application
 * To clone the repo and run the game
 ```shell
 $ git clone https://github.com/adrianeyre/api-sql-container
 $ cd api-sql-container
 ```
+
+## <a name="entity">Entity Framework</a>
+### <a name="setup">Setup</a>
+- Open folder `/EntityFrameworkMigrationsExample`
+- Load the application `ApiSQLContainer.sln`
+- Set the start up project to `docker-compose`
+
+
+
 - Open the file `\ApiSQLContainer\ApiSQLContainer.sln`
 - Set the start up project to `docker-compose`
 - Run the application in Visual Studio
