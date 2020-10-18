@@ -11,9 +11,9 @@ services:
       SQLSERVER_DATABASE: "ProductsDb"
     image: ${DOCKER_REGISTRY-}apisqlcontainer
     ports:  
-      - '6001:443'  
+      - '44325:443'  
     expose:  
-      - 6001
+      - 44325
     build:
       context: .
       dockerfile: Dockerfile
