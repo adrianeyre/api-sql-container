@@ -38,9 +38,9 @@ $ cd api-sql-container
 
 ## <a name="dacpac">Dacpac Database</a>
 ### <a name="dacpacsetup">Setup</a>
-- Open the file `\DacPacExample\API\DacPacApiExample.sln`
+- Open folder `/DacPacExample/API`
+- Load the application `DacPacApiExample.sln`
 - Set the start up project to `docker-compose`
-- Run the application in Visual Studio
 
 ## <a name="api">API Usage</a>
 - Navigate to `https://localhost:44325/api/products`
