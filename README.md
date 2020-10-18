@@ -1,5 +1,5 @@
 # .NET Core 3.1 API - SQL Server - Entity Framework - Docker Container
-![net](https://img.shields.io/badge/core-v3.1-blue.svg?&logo=.net) [![Generic badge](https://img.shields.io/badge/SSMS-v18.6-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/EntityFramework-v3.1.8-blue.svg)](https://shields.io/) ![](https://img.shields.io/docker/build/mariobehling/loklak.svg)
+![net](https://img.shields.io/badge/core-v3.1-blue.svg?&logo=.net) ![docker](https://img.shields.io/static/v1?label=docker&message=v2.4.0&color=blue&logo=docker&link=https://www.docker.com/products/docker-desktop) [![Generic badge](https://img.shields.io/badge/SSMS-v18.6-blue.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/EntityFramework-v3.1.8-blue.svg)](https://shields.io/) 
 
 ## Background
 This is a simple .NET Core API that is containerised using Docker and a containerised SQL Server.
